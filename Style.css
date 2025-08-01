@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bgcolor : #0e132c;
+    --text : #C4C4C4;
+    --title : #fff;
+    --sky : #56A8FF;
+    --buttonGrad : linear-gradient(to right, #56A8FF, #3F8CFF, #246BFD, #5A2EA6);
+}
+body{
+    background-color: var(--bgcolor);
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    color: unset;
+    text-decoration: unset;
+}
+a:hover{
+    color: unset;
+}
+/* ******************************************* Nav Bar ************************************************************* */
+nav{
+    width: 90%;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    padding: 10px 40px;
+    color: #e6e6e6;
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.048);
+    backdrop-filter: blur(10px);
+}
+nav>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
+.conBut{
+    background: var(--buttonGrad);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+nav>i{
+    display: none !important;
+}
+a:first-child, .about span{
+    color: transparent;
+    background-image: var(--buttonGrad);
+    background-clip: text;
+}
+nav>img{
+    height: 70px;
+    width: 95px;
+}
+@media only screen and (max-width:980px) {
+    nav>i{
+        display: unset !important;
+    }
+    nav>div{
+        position: absolute;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        top: -700px;
+        left: 50%;
+        /* backdrop-filter: blur(10px); */
+        transform: translateX(-50%);
+        background: rgb(55, 65, 130);
+        transition: all 0.5s;
+        font-weight: bold;
+    }
+    /* nav:has(input:checked)>div{
+        animation: bounce 1 0.4s forwards ease-out;
+    } */
+
+    @keyframes bounceDown {
+        60%{
+            top: 110px;
+        }        
+        80%{
+            top: 50px;
+        }
+        100%{
+            top: 110px;
+        }
+    }
+    @keyframes bounceUp {
+        0%{
+            top: 110px;
+        }
+        100%{
+            top: -700px;
+        }
+    }
+}
+
+
+/* ******************************************* Hero Section ************************************************************* */
+
+.hero{
+    padding-top: 250px;
+    height: 100vh;
+}
+.hero *{
+    transition: all 0.5s;
+}
+.hero h4{
+    color: var(--text);
+    font-size: 40px;
+    font-weight: bold;
+}
+.hero h1 {
+    color: var(--title);
+    font-size: 75px;
+    font-family: "Cinzel", serif;
+    font-weight: bold;
+}
+h1>i{
+    font-size: 26px;
+    color: var(--sky);
+}
+button{
+    background-image: var(--buttonGrad);
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    padding: 15px 25px;
+    color: var(--title);
+    font-weight: bold;
+}
+@media only screen and (max-width:815px){
+    .hero h1{
+        font-size: 60px;
+    }    
+}
+@media only screen and (max-width:515px){
+    .hero h4{
+        font-size: 25px;
+    }
+    .hero>div>div{
+        padding: 20px !important;
+    }
+    .hero h1{
+        font-size: 40px;
+    } 
+    .hero i{
+        font-size: 16px;
+    }   
+}
+
+/* ******************************************* Hero Section ************************************************************* */
+
+.about{
+    padding: 100px 0;
+}
+.about .img{
+    width: 300px;
+    height: 370px;
+}
+.about img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.about .img::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 10px solid var(--sky);
+    border-radius: 10px;
+    bottom: -40px;
+    right: -40px;
+}
+.about h1, .skills h1, .education h1, .project h1, .contact h4, .contact h1 {
+    font-size: 30px;
+    color: var(--title);
+}
+.about p, .skills h4, .project p, .contact h5{
+    color: var(--text);
+    text-align: justify;
+}
+.about h4{
+    color: var(--title);
+}
+.about button{
+    margin: 20px;
+}
+button a{
+    color: white !important;
+}
+.about button:last-child{
+    background: var(--bgcolor) !important;
+}
+.about button:last-child::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    z-index: -1;
+    box-sizing: content-box;
+    padding: 2px !important;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: var(--buttonGrad);
+}
+@media only screen and (max-width:450px) {
+    .about .img::after{
+        display: none;
+    }
+}
+
+/* ******************************************* Hero Section ************************************************************* */
+
+.skills img{
+    height: 130px;
+    width: 130px;
+    border-radius: 14px;
+    background-color: white;
+}
+
+/* ******************************************* Education Section ************************************************************* */
+
+
+.education{
+    transition: all 1s;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 15px !important;
+    color: aliceblue;
+    backdrop-filter: blur(5px);
+    background-image: linear-gradient(transparent,transparent);
+}
+.edu{
+    border-left: 2px solid var(--text);
+}
+.edu i{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    top: -10px;
+    left: -25px;
+    background: var(--buttonGrad);
+    transition: all 1s;
+}
+
+.edubox{
+    color: var(--title);
+    backdrop-filter: blur(30px);
+    background-size: cover;
+    border: 5px solid var(--sky);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    transition: all 1s;
+}
+
+/* ******************************************* Project Section ************************************************************* */
+
+
+.project h5{
+    color: var(--title);
+}
+.project span{
+    color: var(--text);
+    padding: 8px 10px;
+    border: 2px solid var(--title);
+    border-radius: 8px;
+}
+.pro{
+    background-color: var(--bgcolor);
+    border-radius: 8px;
+}
+.pro::after, .pro::before{
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: -5px;
+    left: -5px;
+    padding: 5px;
+    box-sizing: content-box;
+    background: var(--buttonGrad);
+}
+.pro::before{
+    filter: blur(30px);
+    animation: pulse 2s infinite alternate linear;
+}
+@keyframes pulse {
+    100%{
+        filter: blur(0);
+    }
+}
+.pro button{
+    background: #0e132c !important;
+    border: 2px solid var(--title);
+    padding: 10px;
+}
+
+@media only screen and (max-width:400px) {
+    .pro button{
+        width: 170px !important;
+    }
+
+}
+
+/* ******************************************* Contact Section ************************************************************* */
+
+
+
+.contact i{
+    padding: 15px;
+    box-shadow: 0px 0px 8px grey;
+    font-size: 35px;
+    width: 80px;
+    height: 80px;
+    /* background-color: rgba(0, 0, 0, 0.8);
+    color: aliceblue; */
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.fontname{
+position: absolute;
+padding: 5px 20px;
+font-weight: bold;
+color: white;
+border-radius: 10px;
+top: -20px;
+opacity: 0;
+transition: all 0.5s;
+}
+.fontname::after{
+content: '';
+position: absolute;
+height: 20px;
+bottom: -9px;
+z-index: -1;
+width: 20px;
+left: 50%;
+transform: translateX(-50%) rotate(45deg);
+}
+.contact a:hover{
+color: white;
+}
+.contact i[class*="github"]:hover, .contact a:has(i[class*="github"])+div, .contact a:has(i[class*="github"])+.fontname::after{
+background-color: black;
+}
+.contact i[class*="linkedin"]:hover, .contact a:has(i[class*="linkedin"])+div, .contact a:has(i[class*="linkedin"])+.fontname::after{
+background-color: #0077B5;
+}
+.contact i[class*="envelope"]:hover, .contact a:has(i[class*="envelope"])+div, .contact a:has(i[class*="envelope"])+.fontname::after{
+background: var(--buttonGrad);
+}
+.contact i[class*="phone"]:hover, .contact a:has(i[class*="phone"])+div, .contact a:has(i[class*="phone"])+.fontname::after{
+background-color: lightgreen;
+}
+.contact a:hover+.fontname{
+top:-60px;
+opacity: 1;
+}
+
+footer{
+    color: var(--text);
+}
+
+
+.about, .education ,.edubox, .pro, .contact{
+    animation: fade linear forwards;
+    animation-timeline: view();
+    animation-range-end: 500px;
+    animation-range-start: 200px;
+    opacity: 0.3;
+    scale: 0.4;
+}
+@keyframes fade {
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.skills .sk{
+    animation: sk linear forwards;
+    animation-timeline: view();
+    transform: translateX(-400px) scale(0.4);
+    opacity: 0;
+    animation-range-end: 400px;
+    animation-range-start: 100px;
+}
+@keyframes sk {
+    100%{
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
