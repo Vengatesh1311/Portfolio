@@ -13,7 +13,7 @@ I'm a full stack web developer skilled in building robust and scalable web appli
 ## 📫 Get in Touch
 
 - Email: avengat1311@gmail.com
-- LinkedIn: [linkedin.com/in/vengatesh-a](https://linkedin.com/in/vengatesh-a)
+- LinkedIn: [linkedin.com/in/vengatesh-a](https://www.linkedin.com/in/vengatesh1311/)
 - Portfolio Website: [vengatesh.dev](https://vengatesh.dev)
 ## 📊 GitHub Stats
 
