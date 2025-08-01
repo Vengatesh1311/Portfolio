@@ -9,19 +9,10 @@ I'm a full stack web developer skilled in building robust and scalable web appli
 - **Backend**: Java, Spring Boot, Servlets
 - **Database**: PostgreSQL, MySQL
 - **Tools**: Git, GitHub, VSCode, Postman
-## 📁 Featured Projects
 
-### [Bed & Beyond - Hotel Booking System](https://github.com/yourusername/bed-and-beyond)
-- A full-stack CRUD application to manage hotel bookings securely.
-- Built with Java Servlets and PostgreSQL.
-- Features: secure login, real-time data update, admin panel.
-
-### [Task Tracker App](https://github.com/yourusername/task-tracker)
-- React-based task manager with intuitive UI.
-- Used hooks and context for state management.
 ## 📫 Get in Touch
 
-- Email: vengatesh@example.com
+- Email: avengat1311@gmail.com
 - LinkedIn: [linkedin.com/in/vengatesh-a](https://linkedin.com/in/vengatesh-a)
 - Portfolio Website: [vengatesh.dev](https://vengatesh.dev)
 ## 📊 GitHub Stats
